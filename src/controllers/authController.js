@@ -17,11 +17,9 @@ function authenticateUser(req, res) {
     // Verifica las credenciales proporcionadas en la solicitud con las almacenadas en las variables de entorno
     if (username === storedUsername && password === storedPassword) {
         // Genera un token JWT
-        const token = jwt.sign({ sub: username }, secretKey, { expiresIn: '1h' });
+        const token = jwt.sign({ sub: username }, secretKey, { expiresIn: '24h' });
 
-        console.log("token", jwt.decode(token) );
-
-        res.json({ token });
+        res.json({ token, message: 'Inicio de sesión exitoso' });
     } else {
         res.status(401).json({ message: 'Credenciales incorrectas.' });
     }

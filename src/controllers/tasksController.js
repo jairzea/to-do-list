@@ -1,16 +1,15 @@
 // controllers/tasksController.js
-const { authenticateToken } = require('../middleware/authMiddleware');
+const { v4: uuidv4 } = require('uuid');
 
 const getTasks = (req, res) => {
-  // Aquí no es necesario repetir la lógica de verificación del token,
-  // ya que se hace en el middleware `authenticateToken`.
-
-  // Aquí puedes continuar con la lógica para devolver la lista de tareas
-  // Por ejemplo:
   const tasks = [
-    { id: 1, title: 'Hacer la compra' },
-    { id: 2, title: 'Lavar el coche' },
-    { id: 3, title: 'Estudiar Node.js' },
+    { id: uuidv4(), content: 'Hacer mercado' },
+    { id: uuidv4(), content: 'Ir al gimnasio' },
+    { id: uuidv4(), content: 'Karate' },
+    { id: uuidv4(), content: 'Tomar agua' },
+    { id: uuidv4(), content: 'Dormir' },
+    { id: uuidv4(), content: 'Lavar el coche' },
+    { id: uuidv4(), content: 'Estudiar Node.js' },    
   ];
 
   res.json(tasks);
