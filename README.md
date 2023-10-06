@@ -6,9 +6,9 @@ Este es el README para la API To-Do List en Node.js. A continuación, se describ
 
 El código fuente de esta API se encuentra en el siguiente repositorio de GitHub: [https://github.com/jairzea/to-do-list.git](https://github.com/jairzea/to-do-list.git)
 
-## Configuración
+## Instalación
 
-Siga estos pasos para configurar la API en su entorno local:
+Siga estos pasos para instalar las dependencias de la API:
 
 1. Clona el repositorio:
 
@@ -16,6 +16,18 @@ Siga estos pasos para configurar la API en su entorno local:
    git clone https://github.com/jairzea/to-do-list.git
    cd to-do-list
    ```
+
+2. Asegúrate de tener Node.js y npm instalados en tu máquina.
+
+3. Ejecuta el siguiente comando para instalar las dependencias:
+
+   ```bash
+   npm install
+   ```
+
+## Configuración
+
+Siga estos pasos para configurar la API en su entorno local:
 
 2. Ejecuta el script `config/generateSecretKey.js` para obtener la clave secreta JWT:
 
@@ -33,17 +45,6 @@ Siga estos pasos para configurar la API en su entorno local:
 
 4. Copia el archivo `.env-example` proporcionado en el repositorio a un nuevo archivo llamado `.env` y ajusta las demás variables de entorno según tus necesidades. Este archivo puede contener configuraciones predeterminadas para el usuario de inicio de sesión u otras configuraciones relevantes.
 
-## Instalación
-
-Siga estos pasos para instalar las dependencias de la API:
-
-1. Asegúrate de tener Node.js y npm instalados en tu máquina.
-
-2. Ejecuta el siguiente comando para instalar las dependencias:
-
-   ```bash
-   npm install
-   ```
 
 ## Ejecución
 
